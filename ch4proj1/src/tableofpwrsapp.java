@@ -26,7 +26,7 @@ public class tableofpwrsapp {
 		}
 		
 			System.out.println(table);
-			System.out.println("continue:(y/n)");
+			System.out.print("continue:(y/n)");
 			choice = sc.next();
 		}
 		sc.close();
