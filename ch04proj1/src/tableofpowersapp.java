@@ -13,7 +13,7 @@ public class tableofpowersapp {
 			System.out.print("Enter an integer: ");
 			int number = sc.nextInt();
 			System.out.println();
-			String table = ("Number \t" + "Squared\t" + "Cubed  \n" +
+			String table = ("Number\t" + "Squared\t" + "Cubed\n" +
 					"======\t" + "=======\t" + "=====\n");
 			System.out.println(table);
 			for (int i = 1; i <= number; i++) {
