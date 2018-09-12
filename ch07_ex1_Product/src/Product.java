@@ -43,6 +43,9 @@ public class Product {
     
     public String getPriceNumberFormat() {
     	NumberFormat number = NumberFormat.getInstance();
+    	number.setMaximumFractionDigits(2);
+    	number.setMinimumFractionDigits(2);
     	return number.format(price);
+    	
     }
 }

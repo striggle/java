@@ -11,6 +11,10 @@ public class ToStringDemoApp {
 		
 		System.out.println("t1 fields: " + t1.getId()+ ", " + t1.getCode());
 		
+		BoardGame bg1 = new BoardGame(1, "cl", 15, "CandyLand", 48);
+		
+		System.out.println(bg1);
+		
 		System.out.println("bye!");
 	}
 
