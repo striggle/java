@@ -75,20 +75,20 @@ public class ConsoleIO implements UserIO {
 	@Override
 	public double getDouble(String prompt, double min, double max) {
 		 double d = 0;
-	        boolean isValid = false;
-	        while (!isValid) {
-	            d = getDouble(prompt);
-	            if (d <= min) {
-	                System.out.println(
-	                        "Error! Number must be greater than " + min + ".");
-	            } else if (d >= max) {
-	                System.out.println(
-	                        "Error! Number must be less than " + max + ".");
-	            } else {
+	     boolean isValid = false;
+	     while (!isValid) {
+	         d = getDouble(prompt);
+	         if (d <= min) {
+	             System.out.println(
+	                     "Error! Number must be greater than " + min + ".");
+	         } else if (d >= max) {
+	             System.out.println(
+	                     "Error! Number must be less than " + max + ".");
+	         } else {
 	                isValid = true;
-	            }
-	        }
-	        return d;
+	         }
+	     }
+	     return d;
 	}
 
 	@Override
