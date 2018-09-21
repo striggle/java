@@ -1,9 +1,10 @@
+import java.util.Scanner;
 
 public class IOFactory {
 	
 	public static ConsoleIO getUserIO() {
-		
-		ConsoleIO userIO = new ConsoleIO();
+		Scanner sc = new Scanner(System.in);
+		ConsoleIO userIO = new ConsoleIO(sc);
 		return userIO;
 	}
 

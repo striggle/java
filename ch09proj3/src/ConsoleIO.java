@@ -2,7 +2,12 @@ import java.util.Scanner;
 
 public class ConsoleIO implements UserIO {
 
-	Scanner sc = new Scanner(System.in);
+	private Scanner sc;
+
+	public ConsoleIO(Scanner sc) {
+		super();
+		this.sc = sc;
+	}
 	
 	@Override
 	public void print(String s) {
@@ -26,10 +31,10 @@ public class ConsoleIO implements UserIO {
         while (!isValid) {
             System.out.print(prompt);
             if (sc.hasNextInt()) {
-                i = sc.nextInt();
+            	i = sc.nextInt();
                 isValid = true;
             } else {
-                System.out.println("Error! Invalid integer. Try again.");
+            	System.out.println("Invalid Integer. Try again.");
             }
             sc.nextLine();  // discard any other data entered on the line
         }
@@ -119,6 +124,21 @@ public class ConsoleIO implements UserIO {
 	        }
 	        else {
 	        	System.out.println("Error! Entry must be 'x' or 'y'. Try again.");
+	        }
+        }
+        return s;
+	}
+	
+	public String getEmail(String prompt) {
+		boolean isValid = false;
+        String s = "";
+        while (!isValid) {
+            s = getString(prompt);  // read user entry
+	        if (s.endsWith("@maxtrain.com")) {
+	        	isValid = true;
+	        }
+	        else {
+	        	System.out.println("Error! Invalid email address.");
 	        }
         }
         return s;
